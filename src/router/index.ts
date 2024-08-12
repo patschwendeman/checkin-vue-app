@@ -11,8 +11,8 @@ const router = createRouter({
     },
     {
       path: '/auth',
-      name: 'visiter number screen',
-      component: () => import('../views/VisiterNumberView.vue')
+      name: 'visitor number screen',
+      component: () => import('../views/VisitorNumberView.vue')
     },
     {
       path: '/data',

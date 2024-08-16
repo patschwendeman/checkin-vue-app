@@ -6,6 +6,7 @@ defineProps<{
   backgroundColor: string
   color: string
   route?: string
+  isDisabled?: boolean
   onClick?: () => void
 }>()
 
@@ -22,6 +23,7 @@ function handleClick(route: string | undefined, onClick: any) {
 
 <template>
   <button
+    :disabled="isDisabled"
     :style="{ backgroundColor: backgroundColor, color: color }"
     @click="handleClick(route, onClick)"
   >

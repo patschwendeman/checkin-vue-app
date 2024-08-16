@@ -1,12 +1,32 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import CustomButton from './CustomButton.vue'
+
+let inputValue = ref('')
+let isDisabled = ref(true)
+
+function shouldDisableButton(value: string): boolean {
+  return value.trim() === ''
+}
+
+function updateButtonState(event: Event) {
+  const target = event.target as HTMLInputElement
+  inputValue.value = target.value
+  isDisabled.value = shouldDisableButton(inputValue.value)
+}
 </script>
 
 <template>
   <div class="VisitorNumberInputField">
-    <input type="text" />
+    <input type="text" :value="inputValue" @input="updateButtonState" />
     <nav>
-      <CustomButton text="CHECK IN" backgroundColor="black" color="white" route="/data" />
+      <CustomButton
+        :isDisabled="isDisabled"
+        text="CHECK IN"
+        backgroundColor="black"
+        color="white"
+        route="/data"
+      />
     </nav>
   </div>
 </template>

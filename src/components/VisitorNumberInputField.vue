@@ -1,24 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import CustomButton from './CustomButton.vue'
+import { validateInput } from '../utils/validation'
 
 let inputValue = ref('')
-let isDisabled = ref(true)
+const isDisabled = computed(() => validateInput(inputValue.value))
 
-function shouldDisableButton(value: string): boolean {
-  return value.trim() === ''
-}
-
-function updateButtonState(event: Event) {
+function updateInputValue(event: Event) {
   const target = event.target as HTMLInputElement
   inputValue.value = target.value
-  isDisabled.value = shouldDisableButton(inputValue.value)
 }
 </script>
 
 <template>
   <div class="VisitorNumberInputField">
-    <input type="text" :value="inputValue" @input="updateButtonState" />
+    <input type="text" :value="inputValue" @input="updateInputValue" />
     <nav>
       <CustomButton
         :isDisabled="isDisabled"

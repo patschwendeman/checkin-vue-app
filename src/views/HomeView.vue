@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import MainHeader from '../components/MainHeader.vue'
 import CustomButton from '../components/CustomButton.vue'
-import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -30,7 +29,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+
   align-items: center;
   justify-content: center;
   gap: 50px;

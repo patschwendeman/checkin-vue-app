@@ -14,6 +14,7 @@ function updateInputValue(event: Event) {
 
 <template>
   <div class="VisitorNumberInputField">
+    <input type="text" :value="inputValue" @input="updateInputValue" />
     <nav>
       <CustomButton
         :isDisabled="isDisabled"

@@ -16,12 +16,10 @@ import VisitorNumberInputField from '../components/VisitorNumberInputField.vue'
 <style>
 .visitorNumber-container {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
   gap: 50px;
 }
 </style>

@@ -12,7 +12,6 @@ import VisitorNumberInputField from '../components/VisitorNumberInputField.vue'
     </div>
   </div>
 </template>
-
 <style>
 .visitorNumber-container {
   width: 100%;

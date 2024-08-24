@@ -11,7 +11,6 @@ defineProps<{
 }>()
 
 const router = useRouter()
-
 function handleClick(route: string | undefined, onClick: any) {
   if (route) {
     router.push(route)

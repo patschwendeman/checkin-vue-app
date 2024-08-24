@@ -8,7 +8,6 @@ import CustomButton from './CustomButton.vue'
     <CustomButton text="WEITER" backgroundColor="black" color="white" route="/auth" />
   </nav>
 </template>
-
 <style scoped>
 .footerBar {
   display: flex;
